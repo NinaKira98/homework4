@@ -1,4 +1,6 @@
 //Create a function called 'triangleStars' that prints an upside-down triangle to the console of the given height.
+const triangleStars = function(poo) {
+const n = poo;
 const starsNum = function(stars) {
 	if (stars === 0) {
 		return"";
@@ -13,19 +15,20 @@ const spacesNum = function(spaces) {
 		return " " + spacesNum(spaces - 1);
 };
 
-const triangleStars = function(input) { 
-	if (typeof(input) !== "number" || input < 0) {
+const final = function(input) { 
+  	if (typeof(input) !== "number" || input < 0) {
 		console.log("Try again, loser ;)");
 		return;
 	}
 	if (input === 0) {
 		return "";
 	}
-	console.log(spacesNum((num - input)) + (starsNum((2 * input) - 1)));
-	return triangleStars(input - 1);
+	console.log(spacesNum((n - input)) + (starsNum((2 * input) - 1)));
+	return final(input - 1);
 };
-const num = 6;
-const result = triangleStars(num);
+return final(n);
+}
+console.log(triangleStars(10));
 
 
 /*Create a function called pow which takes two arguments, base and n.  
